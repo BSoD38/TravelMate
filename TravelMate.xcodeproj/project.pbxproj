@@ -54,14 +54,30 @@
 		F066FB9421B50D20000A2BF0 /* TravelMate */ = {
 			isa = PBXGroup;
 			children = (
+				F066FBA821B50D74000A2BF0 /* Controller */,
+				F066FBA721B50D64000A2BF0 /* View */,
 				F066FB9521B50D20000A2BF0 /* AppDelegate.swift */,
-				F066FB9721B50D20000A2BF0 /* ViewController.swift */,
-				F066FB9921B50D20000A2BF0 /* Main.storyboard */,
 				F066FB9C21B50D21000A2BF0 /* Assets.xcassets */,
-				F066FB9E21B50D21000A2BF0 /* LaunchScreen.storyboard */,
 				F066FBA121B50D21000A2BF0 /* Info.plist */,
 			);
 			path = TravelMate;
+			sourceTree = "<group>";
+		};
+		F066FBA721B50D64000A2BF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F066FB9921B50D20000A2BF0 /* Main.storyboard */,
+				F066FB9E21B50D21000A2BF0 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F066FBA821B50D74000A2BF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F066FB9721B50D20000A2BF0 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
