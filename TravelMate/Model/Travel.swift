@@ -39,7 +39,8 @@ struct Travel: Codable {
     mutating public func addParticipant(toAdd: Person) {
         participants.append(toAdd)
     }
-    
+   
+    //Calcul budget
     func currentBudget(index: Int) -> Float {
         if participants.indices.contains(index){
             let currentPerson = participants[index]
@@ -51,11 +52,25 @@ struct Travel: Codable {
         }
     }
     
-    func suspens(person: Person) -> Float{
+    //Retourne le to
+    func suspens(person: Person) -> [Float]{
+        var currentDebt: [Float] = []
+        for spending in spendings {
+            for person2 in participants {
+                if person2 == person{
+                    currentDebt += [spending.spendfor()]
+                }
+            }
+        }
+        return currentDebt
+    }
+    
+    //Retourne le total que l'utilisateur doit aux autres participants
+    func suspensT(person: Person) -> Float{
         var currentDebt: Float = 0.0
         for spending in spendings {
             for person2 in participants {
-                 if person2 == person{
+                if person2 == person{
                     currentDebt += spending.spendfor()
                 }
             }
@@ -63,16 +78,30 @@ struct Travel: Codable {
         return currentDebt
     }
     
-    func forMe(person: Person) -> Float{
-        var forme: Float = 0.0
+    //Retourne tableau des sommes que les participants doivent à cet utilisateur
+    func forMe(person: Person) -> [Float]{
+        var forme: [Float] = []
         for spending in spendings {
             for person2 in participants {
                 if person2 != person{
-                    forme += spending.spendfor()
+                    forme += [spending.spendfor()]
                 }
             }
         }
         return forme
+    }
+    
+    //Retourne le total des sommes que les participants doivent à cet utilisateur
+    func forMeT(person: Person) -> Float{
+        var formet: Float = 0.0
+        for spending in spendings {
+            for person2 in participants {
+                if person2 != person{
+                    formet += spending.spendfor()
+                }
+            }
+        }
+        return formet
     }
     
     func whoPay (person: Person) -> [Person]? {
