@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Spending {
+struct Spending: Equatable, Codable {
     private var payer: Person?
     private var payFor: [Person] = []
     private var hasPaid: [Person] = []
@@ -18,6 +18,24 @@ struct Spending {
         payer = p1
         payFor = p2
         value = v
+    }
+    
+    //Custom == operator
+    static func == (lhs: Spending, rhs: Spending) -> Bool {
+        if lhs.value == rhs.value {
+            for (index, person) in lhs.tab.enumerated() {
+                if rhs.tab.indices.contains(index) {
+                    if person != rhs.tab[index] {
+                        return false
+                    }
+                } else {
+                    return false
+                }
+            }
+        } else {
+            return false
+        }
+        return true
     }
     
     private func haspaid(person: Person) -> Bool{

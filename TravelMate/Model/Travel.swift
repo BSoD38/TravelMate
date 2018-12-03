@@ -9,23 +9,35 @@
 import Foundation
 import os.log
 
-class Travel: NSObject, NSCoding {
+struct Travel: Codable {
     private var name = ""
     private var participants: [Person] = []
     private var spendings: [Spending] = []
     
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("travels")
-    
-    struct PropertyKey {
-        static let name = "name"
-        static let participants = "participants"
-        static let spendings = "spendings"
-    }
-    
+    //URL for file storage: points to Document directory, then JSON data file
+    static public let url = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: .userDomainMask).first!.appendingPathComponent("travels.json", isDirectory: false)
     
     init(n: String, p: [Person], s: [Spending]) {
         name = n
+        participants = p
+        spendings = s
+    }
+    
+    static public func saveData(travels: [Travel]) {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(travels)
+            if FileManager.default.fileExists(atPath: url.path) {
+                try FileManager.default.removeItem(at: url)
+            }
+            FileManager.default.createFile(atPath: url.path, contents: data, attributes: nil)
+        } catch {
+            fatalError("Saving data failed.")
+        }
+    }
+    
+    mutating public func addParticipant(toAdd: Person) {
+        participants.append(toAdd)
     }
     
     func currentBudget(index: Int) -> Float {
@@ -48,27 +60,35 @@ class Travel: NSObject, NSCoding {
     }
     
     //Data persistence
-    
-    required convenience init?(coder aDecoder: NSCoder) {
-        guard let name = aDecoder.decodeObject(forKey: PropertyKey.name) as? String else{
-            os_log("Unable to decode name in Travel object", log: OSLog.default, type: .debug)
-            return nil
-        }
-        guard let participants = aDecoder.decodeObject(forKey: PropertyKey.participants) as? [Person] else{
-            os_log("Unable to decode participants in Travel object", log: OSLog.default, type: .debug)
-            return nil
-        }
-        guard let spendings = aDecoder.decodeObject(forKey: PropertyKey.participants) as? [Spending] else{
-            os_log("Unable to decode spendings in Travel object", log: OSLog.default, type: .debug)
-            return nil
-        }
-        self.init(n: name, p: participants, s: spendings)
+    mutating public func addSpending(toAdd: Spending) {
+        spendings.append(toAdd)
     }
     
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(name, forKey: PropertyKey.name)
-        aCoder.encode(participants, forKey: PropertyKey.participants)
-        aCoder.encode(spendings, forKey: PropertyKey.spendings)
+    public func getParticipants() -> [Person] {
+        return self.participants
     }
+    
+    public func getSpendings() -> [Spending] {
+        return self.spendings
+    }
+    
+    public func getParticipantByReference(reference: Person) -> Person? {
+        for participant in participants {
+            if(participant === reference) {
+                return participant
+            }
+        }
+        return nil
+    }
+    
+    public func getSpendingByReference(reference: Spending) -> Spending? {
+        for spending in spendings {
+            if(spending == reference) {
+                return spending
+            }
+        }
+        return nil
+    }
+
 
 }

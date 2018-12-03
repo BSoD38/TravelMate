@@ -8,13 +8,18 @@
 
 import Foundation
 
-class Person {
+class Person: Equatable, Codable {
     private var name = ""
     private var budget: Float = 0.0
     
     init (n: String ,b: Float){
         name = n
         budget = b
+    }
+    
+    //Custom == operator
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        return lhs.name == rhs.name
     }
     
     public func getBudget() -> Float{
