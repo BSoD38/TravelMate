@@ -10,9 +10,9 @@ import Foundation
 
 class Person {
     private var name = ""
-    private var budget = 0
+    private var budget: Float = 0.0
     
-    public func Person (n: String ,b: Int){
+    init (n: String ,b: Float){
         name = n
         budget = b
     }
