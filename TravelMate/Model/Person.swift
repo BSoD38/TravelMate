@@ -16,5 +16,4 @@ class Person {
         name = n
         budget = b
     }
-    
 }
