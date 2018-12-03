@@ -48,7 +48,6 @@
 		F066FB8921B50D20000A2BF0 = {
 			isa = PBXGroup;
 			children = (
-				2CD43FAA21B51437003B7DE3 /* Model */,
 				F066FB9421B50D20000A2BF0 /* TravelMate */,
 				F066FB9321B50D20000A2BF0 /* Products */,
 			);
@@ -65,6 +64,7 @@
 		F066FB9421B50D20000A2BF0 /* TravelMate */ = {
 			isa = PBXGroup;
 			children = (
+				2CD43FAA21B51437003B7DE3 /* Model */,
 				F066FBA821B50D74000A2BF0 /* Controller */,
 				F066FBA721B50D64000A2BF0 /* View */,
 				F066FB9521B50D20000A2BF0 /* AppDelegate.swift */,
