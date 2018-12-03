@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43FAD21B51480003B7DE3 /* Person.swift */; };
 		F066FB9621B50D20000A2BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FB9521B50D20000A2BF0 /* AppDelegate.swift */; };
 		F066FB9821B50D20000A2BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FB9721B50D20000A2BF0 /* ViewController.swift */; };
 		F066FB9B21B50D20000A2BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F066FB9921B50D20000A2BF0 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CD43FAD21B51480003B7DE3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F066FB9221B50D20000A2BF0 /* TravelMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F066FB9521B50D20000A2BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F066FB9721B50D20000A2BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,9 +37,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CD43FAA21B51437003B7DE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CD43FAD21B51480003B7DE3 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F066FB8921B50D20000A2BF0 = {
 			isa = PBXGroup;
 			children = (
+				2CD43FAA21B51437003B7DE3 /* Model */,
 				F066FB9421B50D20000A2BF0 /* TravelMate */,
 				F066FB9321B50D20000A2BF0 /* Products */,
 			);
@@ -151,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */,
 				F066FB9821B50D20000A2BF0 /* ViewController.swift in Sources */,
 				F066FB9621B50D20000A2BF0 /* AppDelegate.swift in Sources */,
 			);
