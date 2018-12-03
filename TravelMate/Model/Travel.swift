@@ -51,7 +51,6 @@ struct Travel: Codable {
         }
     }
     
-    
     func suspens(person: Person) -> Float{
         var currentDebt: Float = 0.0
         for spending in spendings {
@@ -74,6 +73,19 @@ struct Travel: Codable {
             }
         }
         return forme
+    }
+    
+    func whoPay (person: Person) -> [Person]? {
+        var tab: [Person] = []
+        for spending in spendings {
+            for person2 in participants {
+                if person2 != person{
+                    tab += [person]
+                    return tab
+                }
+            }
+        }
+        return nil
     }
     
     //Data persistence
