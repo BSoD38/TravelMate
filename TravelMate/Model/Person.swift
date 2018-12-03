@@ -8,17 +8,12 @@
 
 import Foundation
 
-class Person: Hashable {
+class Person {
     private var name = ""
     private var budget: Float = 0.0
-    var hashValue: Int { return ObjectIdentifier(self).hashValue }
     
     init (n: String ,b: Float){
         name = n
         budget = b
-    }
-    
-    static func ==(lhs: Person, rhs: Person) -> Bool {
-        return lhs === rhs
     }
 }
