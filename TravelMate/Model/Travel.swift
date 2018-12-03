@@ -36,6 +36,36 @@ struct Travel: Codable {
         }
     }
     
+    static public func loadData() -> [Travel] {
+        if !FileManager.default.fileExists(atPath: url.path) {
+            print("File \(url.path) was not found.")
+            return []
+        } else {
+            if let data = FileManager.default.contents(atPath: url.path) {
+                let decoder = JSONDecoder()
+                do {
+                    let model = try decoder.decode([Travel].self, from: data)
+                    return model
+                } catch {
+                    fatalError("Unknown fatal error when loading data.")
+                }
+            } else {
+                print("No data at \(url.path)!")
+                return []
+            }
+        }
+    }
+    
+    static public func deleteData() {
+        if FileManager.default.fileExists(atPath: url.path) {
+            do {
+                try FileManager.default.removeItem(at: url)
+            } catch {
+                fatalError("Failure to delete file.")
+            }
+        }
+    }
+    
     mutating public func addParticipant(toAdd: Person) {
         participants.append(toAdd)
     }
@@ -52,12 +82,12 @@ struct Travel: Codable {
     }
     
     
-    func suspens(person: Person) -> Float{
-        for 
-            for Person in participants {
-            
-        }
-    }
+//    func suspens(person: Person) -> Float{
+//        for 
+//            for Person in participants {
+//            
+//        }
+//    }
     
     //Data persistence
     mutating public func addSpending(toAdd: Spending) {
@@ -90,5 +120,11 @@ struct Travel: Codable {
         return nil
     }
 
-
+    public func getName() -> String {
+        return self.name
+    }
+    
+    mutating public func setName(name: String) {
+        self.name = name
+    }
 }
