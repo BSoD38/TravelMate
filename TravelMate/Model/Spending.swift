@@ -23,9 +23,9 @@ struct Spending: Equatable, Codable {
     //Custom == operator
     static func == (lhs: Spending, rhs: Spending) -> Bool {
         if lhs.value == rhs.value {
-            for (index, person) in lhs.tab.enumerated() {
-                if rhs.tab.indices.contains(index) {
-                    if person != rhs.tab[index] {
+            for (index, person) in lhs.payFor.enumerated() {
+                if rhs.payFor.indices.contains(index) {
+                    if person != rhs.payFor[index] {
                         return false
                     }
                 } else {
@@ -39,9 +39,12 @@ struct Spending: Equatable, Codable {
     }
     
     private func haspaid(person: Person) -> Bool{
-        for Person in hasPaid{
-            return Person == person
+        for person2 in hasPaid{
+            if person2 == person {
+                return true
+            }
         }
+        return false
     }
     
     mutating func listHasPaid(person: Person){
