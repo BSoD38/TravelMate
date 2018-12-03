@@ -16,4 +16,12 @@ class Person {
         name = n
         budget = b
     }
+    
+    public func getBudget() -> Float{
+        return budget
+    }
+    
+    public func getName() -> String {
+        return name
+    }
 }

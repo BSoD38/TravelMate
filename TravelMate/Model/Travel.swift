@@ -28,6 +28,25 @@ class Travel: NSObject, NSCoding {
         name = n
     }
     
+    func currentBudget(index: Int) -> Float {
+        if participants.indices.contains(index){
+            let currentPerson = participants[index]
+            let currentBudget = currentPerson.getBudget() - spendings[index].spendfor()
+            return currentBudget
+        }
+        else {
+            return 0
+        }
+    }
+    
+    
+    func suspens(person: Person) -> Float{
+        for 
+            for Person in participants {
+            
+        }
+    }
+    
     //Data persistence
     
     required convenience init?(coder aDecoder: NSCoder) {
