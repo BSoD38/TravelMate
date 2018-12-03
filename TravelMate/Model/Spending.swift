@@ -9,11 +9,22 @@
 import Foundation
 
 struct Spending {
-    private var tab: [Person] = []
+    private var payer: Person?
+    private var payFor: [Person] = []
     private var value: Float = 0.0
     
-    init (p: [Person], v: Float){
-        tab = p
+    init (p1: Person, p2: [Person], v: Float){
+        payer = p1
+        payFor = p2
         value = v
+    }
+    
+    mutating func payfor(person: Person){
+        payFor.append(person)
+    }
+    
+    func spendfor() -> Float{
+        let size = Float(payFor.count)
+        return value / size
     }
 }
