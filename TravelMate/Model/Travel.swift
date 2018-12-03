@@ -53,10 +53,27 @@ struct Travel: Codable {
     
     
     func suspens(person: Person) -> Float{
-        for 
-            for Person in participants {
-            
+        var currentDebt: Float = 0.0
+        for spending in spendings {
+            for person2 in participants {
+                 if person2 == person{
+                    currentDebt += spending.spendfor()
+                }
+            }
         }
+        return currentDebt
+    }
+    
+    func forMe(person: Person) -> Float{
+        var forme: Float = 0.0
+        for spending in spendings {
+            for person2 in participants {
+                if person2 != person{
+                    forme += spending.spendfor()
+                }
+            }
+        }
+        return forme
     }
     
     //Data persistence
