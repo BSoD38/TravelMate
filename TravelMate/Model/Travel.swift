@@ -23,6 +23,7 @@ struct Travel: Codable {
         spendings = s
     }
     
+    //Save object data to disk
     static public func saveData(travels: [Travel]) {
         let encoder = JSONEncoder()
         do {
@@ -36,6 +37,7 @@ struct Travel: Codable {
         }
     }
     
+    //Load object data from disk
     static public func loadData() -> [Travel] {
         if !FileManager.default.fileExists(atPath: url.path) {
             print("File \(url.path) was not found.")
@@ -56,6 +58,7 @@ struct Travel: Codable {
         }
     }
     
+    //Delete data if it exists
     static public func deleteData() {
         if FileManager.default.fileExists(atPath: url.path) {
             do {

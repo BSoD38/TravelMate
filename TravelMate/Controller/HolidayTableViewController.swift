@@ -14,9 +14,6 @@ class HolidayTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         data = Travel.loadData()
-        var test1 = Travel(n: "test", p: [Person(n: "hello", b: 54.0)], s: [])
-        var test2 = Travel(n: "Trucmuche", p: [Person(n: "hello", b: 54.0), Person(n: "hay", b: 999)], s: [])
-        Travel.saveData(travels: [test1, test2])
     }
 
     override func didReceiveMemoryWarning() {
