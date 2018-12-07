@@ -39,6 +39,17 @@ class HolidayTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let barVC = segue.destination as? UITabBarController {
+            barVC.viewControllers?.forEach {
+                if let vc = $0 as? ParticipantDetailViewController {
+                    vc.travel = data[tableView.indexPathForSelectedRow!.row]
+                }
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

@@ -139,7 +139,7 @@ struct Travel: Codable {
     
     func whoPay (person: Person) -> [Person]? {
         var tab: [Person] = []
-        for spending in spendings {
+        for _ in spendings {
             for person2 in participants {
                 if person2 != person{
                     tab += [person]
@@ -150,7 +150,7 @@ struct Travel: Codable {
         return nil
     }
     
-    //Data persistence
+    //Accessors
     mutating public func addSpending(toAdd: Spending) {
         spendings.append(toAdd)
     }
@@ -159,8 +159,16 @@ struct Travel: Codable {
         return self.participants
     }
     
+    public mutating func setParticipants(participants: [Person]) {
+        self.participants = participants
+    }
+    
     public func getSpendings() -> [Spending] {
         return self.spendings
+    }
+    
+    public mutating func setSpendings(spendings: [Spending]) {
+        self.spendings = spendings
     }
     
     public func getParticipantByReference(reference: Person) -> Person? {

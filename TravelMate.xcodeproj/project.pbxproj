@@ -15,6 +15,7 @@
 		F066FBA021B50D21000A2BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F066FB9E21B50D21000A2BF0 /* LaunchScreen.storyboard */; };
 		F066FBAE21B51DB0000A2BF0 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FBAD21B51DB0000A2BF0 /* Travel.swift */; };
 		F066FBB321B56917000A2BF0 /* HolidayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FBB221B56917000A2BF0 /* HolidayTableViewController.swift */; };
+		F075B02521BA653F0014506E /* ParticipantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075B02421BA653F0014506E /* ParticipantDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F066FBA121B50D21000A2BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F066FBAD21B51DB0000A2BF0 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		F066FBB221B56917000A2BF0 /* HolidayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayTableViewController.swift; sourceTree = "<group>"; };
+		F075B02421BA653F0014506E /* ParticipantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F066FBB221B56917000A2BF0 /* HolidayTableViewController.swift */,
+				F075B02421BA653F0014506E /* ParticipantDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */,
 				2CD43FB021B517D1003B7DE3 /* Spending.swift in Sources */,
+				F075B02521BA653F0014506E /* ParticipantDetailViewController.swift in Sources */,
 				F066FBAE21B51DB0000A2BF0 /* Travel.swift in Sources */,
 				F066FB9621B50D20000A2BF0 /* AppDelegate.swift in Sources */,
 				F066FBB321B56917000A2BF0 /* HolidayTableViewController.swift in Sources */,
