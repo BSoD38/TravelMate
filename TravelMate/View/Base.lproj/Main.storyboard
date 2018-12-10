@@ -11,13 +11,6 @@
     </dependencies>
     <scenes>
         <!--Voyages-->
-        </scene>
-            <point key="canvasLocation" x="113" y="-2951"/>
-            </objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zud-uZ-Ndu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                </tableViewController>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
         <scene sceneID="ffv-m6-ens">
             <objects>
                 <tableViewController id="XGr-Dn-qDg" customClass="HolidayTableViewController" customModule="TravelMate" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,8 +20,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HolidayCell" textLabel="wva-pK-mct" detailTextLabel="0e2-ei-eRD" style="IBUITableViewCellStyleSubtitle" id="oLO-fJ-0cK">
-                                <autoresizingMask key="autoresizingMask"/>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oLO-fJ-0cK" id="tke-NK-NKL">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -36,21 +29,21 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wva-pK-mct">
                                             <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0e2-ei-eRD">
                                             <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="highlightedColor"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="TyN-5q-z8a" kind="show" id="Xr1-aK-9lQ"/>
+                                    <segue destination="AJG-v5-j5d" kind="show" id="6DE-cX-eeY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,7 +54,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Voyages" id="2vK-Sq-vn0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pwd-Tp-JH4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pwd-Tp-JH4">
+                            <connections>
+                                <segue destination="9V9-xk-F3Q" kind="show" id="vdR-GC-BJo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zud-uZ-Ndu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="-2951"/>
+        </scene>
         <!--Participants-->
         <scene sceneID="89C-F9-QRj">
             <objects>
@@ -81,8 +85,8 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rBU-iK-BFY">
                                             <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s4l-OC-PAi">
@@ -94,9 +98,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="32S-ag-rhB" kind="showDetail" id="u5Y-Ay-Ewf"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -104,22 +105,60 @@
                             <outlet property="delegate" destination="dgL-eA-fWD" id="63R-ow-ne6"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Groupe" id="Y8G-At-Nrz"/>
+                    <tabBarItem key="tabBarItem" title="test" id="Y8G-At-Nrz"/>
                 </tableViewController>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPr-5U-gXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3641" y="-3347"/>
+            <point key="canvasLocation" x="3641" y="-3830"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="cXD-Ip-7o5">
+        <!--Créer un voyage-->
+        <scene sceneID="EKW-6v-upG">
             <objects>
-                <viewController id="32S-ag-rhB" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qH1-Ae-dbw">
+                <viewController id="9V9-xk-F3Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xbB-CP-DL1" customClass="CreateTrip" customModule="TravelMate" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eko-b9-wzs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="507"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8WR-f3-BMO">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="507"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de voyageurs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgJ-sP-nha">
+                                                <rect key="frame" x="15" y="125" width="169" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom du voyage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxb-uh-rbx">
+                                                <rect key="frame" x="15" y="60" width="345" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-2b-Y2c">
+                                                <rect key="frame" x="266" y="121" width="94" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs6-RY-7e8">
+                                                <rect key="frame" x="209" y="121" width="35" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="PTx-aw-en4"/>
+                        <viewLayoutGuide key="safeArea" id="fv2-3N-nMb"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Créer un voyage" id="f1b-VR-jsQ">
@@ -127,9 +166,9 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yEb-ng-rVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPT-j8-qqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4711" y="-3346"/>
+            <point key="canvasLocation" x="1192.8" y="-3488.0059970014995"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I4i-lo-NIZ">
@@ -142,34 +181,31 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <segue destination="XGr-Dn-qDg" kind="relationship" relationship="rootViewController" id="4Eo-zz-H16"/>
                     </connections>
-                        <segue destination="XGr-Dn-qDg" kind="relationship" relationship="rootViewController" id="V7k-WC-r8s"/>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z62-L1-Uzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-993" y="-2951"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="Ily-6c-YHN">
+        <scene sceneID="ZBU-8H-1e0">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TyN-5q-z8a" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="tJq-CE-QEx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4yI-iK-RkA"/>
-                    </navigationItem>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4mn-om-TdG">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                <tabBarController id="AJG-v5-j5d" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oyf-8b-Utq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="dgL-eA-fWD" kind="relationship" relationship="viewControllers" id="JAr-jA-IDH"/>
-                        <segue destination="Ch8-VJ-ja1" kind="relationship" relationship="viewControllers" id="FBa-Z5-Q1D"/>
+                        <segue destination="dgL-eA-fWD" kind="relationship" relationship="viewControllers" id="hBC-Wu-P2h"/>
+                        <segue destination="j2H-bQ-kWA" kind="relationship" relationship="viewControllers" id="QDV-0c-mog"/>
+                        <segue destination="PE2-b5-am7" kind="relationship" relationship="viewControllers" id="5qv-Ws-3jG"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="svV-aD-wjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OtR-Tv-v6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2441" y="-2952"/>
+            <point key="canvasLocation" x="2326" y="-2952"/>
         </scene>
         <!--Mon budget-->
         <scene sceneID="3Ib-8N-ILf">
@@ -234,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TT6-nH-yLn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6084" y="206"/>
+            <point key="canvasLocation" x="2274" y="-1915"/>
         </scene>
         <!--Nouvelle dépense-->
         <scene sceneID="XOH-Eh-HXk">
@@ -251,7 +287,7 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YfB-fs-5wz">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" text="Nom de ma dépense" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjv-wb-Rsf">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Nom de ma dépense" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjv-wb-Rsf">
                                                 <rect key="frame" x="8" y="15" width="359" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
@@ -269,11 +305,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Somme totale" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVn-v4-QOI">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Somme totale" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVn-v4-QOI">
                                                 <rect key="frame" x="8" y="144" width="273" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STa-cx-YEg">
@@ -313,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzu-v7-17j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4570" y="207"/>
+            <point key="canvasLocation" x="759" y="-1914"/>
         </scene>
         <!--Comptes-->
         <scene sceneID="a8e-s0-sb4">
@@ -353,11 +388,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LBi-BE-Jue"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="6Qy-Gv-zfn"/>
                     <navigationItem key="navigationItem" title="Comptes" id="OKB-4t-075"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lL5-Vu-7st" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5303" y="206"/>
+            <point key="canvasLocation" x="3641" y="-2324"/>
         </scene>
         <!--Historique-->
         <scene sceneID="17L-Zl-Zis">
@@ -402,11 +438,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="V5m-h2-1bD"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="NgV-uQ-1K8"/>
                     <navigationItem key="navigationItem" title="Historique" id="rit-H8-WCp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6d4-Tc-TcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6903" y="206"/>
+            <point key="canvasLocation" x="3641" y="-3092"/>
         </scene>
     </scenes>
 </document>
