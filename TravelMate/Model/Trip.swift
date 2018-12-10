@@ -9,7 +9,7 @@
 import Foundation
 import os.log
 
-struct Travel: Codable {
+struct Trip: Codable {
     private var name = ""
     private var participants: [Person] = []
     private var spendings: [Spending] = []
@@ -24,7 +24,7 @@ struct Travel: Codable {
     }
     
     //Save object data to disk
-    static public func saveData(travels: [Travel]) {
+    static public func saveData(travels: [Trip]) {
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(travels)
@@ -38,7 +38,7 @@ struct Travel: Codable {
     }
     
     //Load object data from disk
-    static public func loadData() -> [Travel] {
+    static public func loadData() -> [Trip] {
         if !FileManager.default.fileExists(atPath: url.path) {
             print("File \(url.path) was not found.")
             return []
@@ -46,7 +46,7 @@ struct Travel: Codable {
             if let data = FileManager.default.contents(atPath: url.path) {
                 let decoder = JSONDecoder()
                 do {
-                    let model = try decoder.decode([Travel].self, from: data)
+                    let model = try decoder.decode([Trip].self, from: data)
                     return model
                 } catch {
                     fatalError("Unknown fatal error when loading data.")

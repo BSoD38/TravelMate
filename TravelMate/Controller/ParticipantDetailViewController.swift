@@ -10,7 +10,7 @@
 import UIKit
 
 class ParticipantDetailViewController: UITableViewController {
-    public var travel: Travel? = nil
+    public var travel: Trip? = nil
     public var index: Int? = nil
     
     override func viewDidLoad() {

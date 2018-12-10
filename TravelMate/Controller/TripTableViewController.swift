@@ -8,12 +8,12 @@
 
 import UIKit
 
-class HolidayTableViewController: UITableViewController {
-    var data: [Travel] = []
+class TripTableViewController: UITableViewController {
+    var data: [Trip] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        data = Travel.loadData()
+        data = Trip.loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,6 +52,10 @@ class HolidayTableViewController: UITableViewController {
                     vc.travel = selection
                 }
             }
+        }
+        
+        if let createVC = segue.destination as? CreateTripController {
+            createVC.trips = self.data
         }
     }
 

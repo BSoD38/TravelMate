@@ -13,7 +13,7 @@
         <!--Voyages-->
         <scene sceneID="ffv-m6-ens">
             <objects>
-                <tableViewController id="XGr-Dn-qDg" customClass="HolidayTableViewController" customModule="TravelMate" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XGr-Dn-qDg" customClass="TripTableViewController" customModule="TravelMate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1oh-3s-0cq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
                     <navigationItem key="navigationItem" title="Voyages" id="2vK-Sq-vn0">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pwd-Tp-JH4">
                             <connections>
-                                <segue destination="9V9-xk-F3Q" kind="show" id="vdR-GC-BJo"/>
+                                <segue destination="9V9-xk-F3Q" kind="show" id="zLl-Uz-ONo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -64,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zud-uZ-Ndu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="-2951"/>
+            <point key="canvasLocation" x="111" y="-2910"/>
         </scene>
         <!--Participants-->
         <scene sceneID="89C-F9-QRj">
@@ -105,7 +105,10 @@
                             <outlet property="delegate" destination="dgL-eA-fWD" id="63R-ow-ne6"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="test" id="Y8G-At-Nrz"/>
+                    <tabBarItem key="tabBarItem" title="Groupe" id="Y8G-At-Nrz"/>
+                    <navigationItem key="navigationItem" title="Title" id="jYU-vE-hTD">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="hM0-NE-qgo"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPr-5U-gXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,48 +117,58 @@
         <!--Créer un voyage-->
         <scene sceneID="EKW-6v-upG">
             <objects>
-                <viewController id="9V9-xk-F3Q" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xbB-CP-DL1" customClass="CreateTrip" customModule="TravelMate" customModuleProvider="target">
+                <viewController id="9V9-xk-F3Q" customClass="CreateTripController" customModule="TravelMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xbB-CP-DL1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eko-b9-wzs">
-                                <rect key="frame" x="0.0" y="64" width="375" height="507"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CKU-ZQ-qbK">
+                                <rect key="frame" x="0.0" y="116" width="375" height="507"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8WR-f3-BMO">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="507"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eko-b9-wzs">
+                                        <rect key="frame" x="0.0" y="-34" width="375" height="196"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de voyageurs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgJ-sP-nha">
-                                                <rect key="frame" x="15" y="125" width="169" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom du voyage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxb-uh-rbx">
-                                                <rect key="frame" x="15" y="60" width="345" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-2b-Y2c">
-                                                <rect key="frame" x="266" y="121" width="94" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </stepper>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs6-RY-7e8">
-                                                <rect key="frame" x="209" y="121" width="35" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8WR-f3-BMO">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de voyageurs :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgJ-sP-nha">
+                                                        <rect key="frame" x="15" y="125" width="178" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom du voyage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxb-uh-rbx">
+                                                        <rect key="frame" x="15" y="60" width="345" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-2b-Y2c">
+                                                        <rect key="frame" x="266" y="121" width="94" height="29"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <action selector="onStepperChange" destination="9V9-xk-F3Q" eventType="valueChanged" id="K0e-Vg-2fg"/>
+                                                        </connections>
+                                                    </stepper>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs6-RY-7e8">
+                                                        <rect key="frame" x="223" y="121" width="35" height="29"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <viewLayoutGuide key="safeArea" id="ld8-66-OuV"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fv2-3N-nMb"/>
@@ -165,6 +178,12 @@
                         <barButtonItem key="rightBarButtonItem" title="Valider" id="Hcx-rb-lcs"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="personCount" destination="Gs6-RY-7e8" id="uN3-yz-64J"/>
+                        <outlet property="personCountStepper" destination="c5c-2b-Y2c" id="1kT-tM-eVO"/>
+                        <outlet property="stackView" destination="eko-b9-wzs" id="t32-Be-Rdq"/>
+                        <outlet property="tripName" destination="fxb-uh-rbx" id="8o9-kH-jlw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPT-j8-qqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +205,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z62-L1-Uzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-993" y="-2951"/>
+            <point key="canvasLocation" x="-996" y="-2910"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZBU-8H-1e0">
@@ -205,7 +224,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtR-Tv-v6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="-2952"/>
+            <point key="canvasLocation" x="2308" y="-2910"/>
         </scene>
         <!--Mon budget-->
         <scene sceneID="3Ib-8N-ILf">
@@ -380,7 +399,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vT-3l-L2e">
-                                <rect key="frame" x="0.0" y="153" width="375" height="485"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="493"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -388,12 +407,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LBi-BE-Jue"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6Qy-Gv-zfn"/>
+                    <tabBarItem key="tabBarItem" title="Comptes" id="6Qy-Gv-zfn"/>
                     <navigationItem key="navigationItem" title="Comptes" id="OKB-4t-075"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lL5-Vu-7st" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3641" y="-2324"/>
+            <point key="canvasLocation" x="3620" y="-2364.4677661169417"/>
         </scene>
         <!--Historique-->
         <scene sceneID="17L-Zl-Zis">
@@ -438,7 +457,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="V5m-h2-1bD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="NgV-uQ-1K8"/>
+                    <tabBarItem key="tabBarItem" title="Historique" id="NgV-uQ-1K8"/>
                     <navigationItem key="navigationItem" title="Historique" id="rit-H8-WCp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6d4-Tc-TcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
