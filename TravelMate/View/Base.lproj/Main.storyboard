@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -93,6 +94,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="32S-ag-rhB" kind="showDetail" id="u5Y-Ay-Ewf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -101,14 +105,26 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Groupe" id="Y8G-At-Nrz"/>
-                    <navigationItem key="navigationItem" title="Groupe" id="sft-94-Rwf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TFe-tD-iRb"/>
-                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPr-5U-gXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3641" y="-3347"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cXD-Ip-7o5">
+            <objects>
+                <viewController id="32S-ag-rhB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qH1-Ae-dbw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PTx-aw-en4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEb-ng-rVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4711" y="-3346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I4i-lo-NIZ">
@@ -133,14 +149,16 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TyN-5q-z8a" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="tJq-CE-QEx"/>
+                    <navigationItem key="navigationItem" id="tJq-CE-QEx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4yI-iK-RkA"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4mn-om-TdG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="dgL-eA-fWD" kind="relationship" relationship="viewControllers" id="JAr-jA-IDH"/>
-                        <segue destination="424-MA-Our" kind="relationship" relationship="viewControllers" id="Znc-Qm-5FD"/>
                         <segue destination="Ch8-VJ-ja1" kind="relationship" relationship="viewControllers" id="FBa-Z5-Q1D"/>
                     </connections>
                 </tabBarController>
@@ -148,26 +166,11 @@
             </objects>
             <point key="canvasLocation" x="2441" y="-2952"/>
         </scene>
-        <!--Historique-->
-        <scene sceneID="iwf-X3-dBf">
-            <objects>
-                <viewController title="Historique" id="424-MA-Our" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Historique" id="vFg-8V-oQf"/>
-                    <navigationItem key="navigationItem" title="Historique" id="Rc0-cA-8Sr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4Gm-MR-ICi"/>
-                    </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tJk-xJ-kOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3641" y="-2566"/>
-        </scene>
         <!--Comptes-->
         <scene sceneID="KDI-yB-KSV">
             <objects>
                 <viewController title="Comptes" id="Ch8-VJ-ja1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Comptes" id="UHU-V7-Lxi"/>
-                    <navigationItem key="navigationItem" title="Comptes" id="L1n-i8-F6b"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wd6-wo-i1e" userLabel="First Responder" sceneMemberID="firstResponder"/>

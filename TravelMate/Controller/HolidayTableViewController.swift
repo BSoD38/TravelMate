@@ -42,10 +42,14 @@ class HolidayTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        let selection = data[tableView.indexPathForSelectedRow!.row]
         if let barVC = segue.destination as? UITabBarController {
+            barVC.navigationItem.title = selection.getName()
+            //Obtient le contrôleur depuis la tab bar
             barVC.viewControllers?.forEach {
                 if let vc = $0 as? ParticipantDetailViewController {
-                    vc.travel = data[tableView.indexPathForSelectedRow!.row]
+                    vc.index = tableView.indexPathForSelectedRow!.row
+                    vc.travel = selection
                 }
             }
         }
