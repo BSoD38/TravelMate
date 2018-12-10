@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CC4331321BE4A2B00C490B8 /* Historique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC4331221BE4A2B00C490B8 /* Historique.swift */; };
 		2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43FAD21B51480003B7DE3 /* Person.swift */; };
 		2CD43FB021B517D1003B7DE3 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43FAF21B517D1003B7DE3 /* Spending.swift */; };
+		2CF1A47E21BA583A002DD3CB /* CreateTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1A47D21BA583A002DD3CB /* CreateTrip.swift */; };
+		2CF1A48021BA6815002DD3CB /* CreateSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1A47F21BA6815002DD3CB /* CreateSpending.swift */; };
+		2CF1A48221BA7951002DD3CB /* Comptes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1A48121BA7951002DD3CB /* Comptes.swift */; };
+		2CF1A48421BA86FB002DD3CB /* MyBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1A48321BA86FB002DD3CB /* MyBudget.swift */; };
 		F066FB9621B50D20000A2BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FB9521B50D20000A2BF0 /* AppDelegate.swift */; };
 		F066FB9B21B50D20000A2BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F066FB9921B50D20000A2BF0 /* Main.storyboard */; };
 		F066FB9D21B50D21000A2BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F066FB9C21B50D21000A2BF0 /* Assets.xcassets */; };
@@ -19,8 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CC4331221BE4A2B00C490B8 /* Historique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historique.swift; sourceTree = "<group>"; };
 		2CD43FAD21B51480003B7DE3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2CD43FAF21B517D1003B7DE3 /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
+		2CF1A47D21BA583A002DD3CB /* CreateTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrip.swift; sourceTree = "<group>"; };
+		2CF1A47F21BA6815002DD3CB /* CreateSpending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpending.swift; sourceTree = "<group>"; };
+		2CF1A48121BA7951002DD3CB /* Comptes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comptes.swift; sourceTree = "<group>"; };
+		2CF1A48321BA86FB002DD3CB /* MyBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBudget.swift; sourceTree = "<group>"; };
 		F066FB9221B50D20000A2BF0 /* TravelMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F066FB9521B50D20000A2BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F066FB9A21B50D20000A2BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +106,11 @@
 			children = (
 				F066FBB221B56917000A2BF0 /* HolidayTableViewController.swift */,
 				F075B02421BA653F0014506E /* ParticipantDetailViewController.swift */,
+				2CF1A48321BA86FB002DD3CB /* MyBudget.swift */,
+				2CF1A47F21BA6815002DD3CB /* CreateSpending.swift */,
+				2CF1A47D21BA583A002DD3CB /* CreateTrip.swift */,
+				2CC4331221BE4A2B00C490B8 /* Historique.swift */,
+				2CF1A48121BA7951002DD3CB /* Comptes.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,10 +186,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF1A47E21BA583A002DD3CB /* CreateTrip.swift in Sources */,
 				2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */,
+				2CC4331321BE4A2B00C490B8 /* Historique.swift in Sources */,
 				2CD43FB021B517D1003B7DE3 /* Spending.swift in Sources */,
 				F075B02521BA653F0014506E /* ParticipantDetailViewController.swift in Sources */,
+				2CF1A48221BA7951002DD3CB /* Comptes.swift in Sources */,
 				F066FBAE21B51DB0000A2BF0 /* Travel.swift in Sources */,
+				2CF1A48421BA86FB002DD3CB /* MyBudget.swift in Sources */,
+				2CF1A48021BA6815002DD3CB /* CreateSpending.swift in Sources */,
 				F066FB9621B50D20000A2BF0 /* AppDelegate.swift in Sources */,
 				F066FBB321B56917000A2BF0 /* HolidayTableViewController.swift in Sources */,
 			);
