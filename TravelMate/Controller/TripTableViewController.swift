@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TripTableViewController: UITableViewController {
+class TripTableViewController: UITableViewController, CreateTripProtocol {
     var data: [Trip] = []
 
     override func viewDidLoad() {
@@ -55,8 +55,13 @@ class TripTableViewController: UITableViewController {
         }
         
         if let createVC = segue.destination as? CreateTripController {
+            createVC.delegate = self
             createVC.trips = self.data
         }
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
     }
 
     /*

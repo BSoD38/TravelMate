@@ -9,31 +9,42 @@
 import UIKit
 
 class DynamicPersonForm: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    let nameField = UITextField()
+    let budgetField = UITextField()
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 345, height: 100)
     }
-    */
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         //Create subviews in view
-        let nameField = UITextField()
+        
         nameField.frame = CGRect(x: 20, y: 10, width: 345, height: 30)
         nameField.placeholder = "Nom"
+        nameField.borderStyle = .roundedRect
         self.addSubview(nameField)
-        let budgetField = UITextField()
         budgetField.frame = CGRect(x: 20, y: 50, width: 345, height: 30)
         budgetField.keyboardType = .decimalPad
         budgetField.placeholder = "Budget"
+        budgetField.borderStyle = .roundedRect
         self.addSubview(budgetField)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("Oh no, something went wrong! (DynamicPersonForm)")
+    }
+    
+    func getName() -> String? {
+        return nameField.text
+    }
+    
+    func getBudget() -> Float? {
+        if let value = budgetField.text {
+            return Float(value)
+        } else {
+            return nil
+        }
     }
 }
