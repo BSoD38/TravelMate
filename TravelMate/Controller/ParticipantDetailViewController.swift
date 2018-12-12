@@ -49,11 +49,15 @@ class ParticipantDetailViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-//        if segue.destination is TertiaryViewController
-//        {
-//            let vc = segue.destination as? TertiaryViewController
-//            vc?.username = "Arthur Dent"
-//        }
+        if let target = segue.destination as? CreateSpendingController {
+            if let tr = travel {
+                target.tripIndex = self.index!
+                for participant in tr.getParticipants() {
+                    target.pickerData.append(participant.getName())
+                }
+            }
+
+        }
     }
     
     /*

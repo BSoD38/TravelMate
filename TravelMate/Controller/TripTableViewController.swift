@@ -47,9 +47,11 @@ class TripTableViewController: UITableViewController, CreateTripProtocol {
             barVC.navigationItem.title = selection.getName()
             //Obtient le contrôleur depuis la tab bar
             barVC.viewControllers?.forEach {
-                if let vc = $0 as? ParticipantDetailViewController {
-                    vc.index = tableView.indexPathForSelectedRow!.row
-                    vc.travel = selection
+                if let vc = $0 as? UINavigationController {
+                    if let target = vc.viewControllers[0] as? ParticipantDetailViewController {
+                        target.index = tableView.indexPathForSelectedRow!.row
+                        target.travel = selection
+                    }
                 }
             }
         }
