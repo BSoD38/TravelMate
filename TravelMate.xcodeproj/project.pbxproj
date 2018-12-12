@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2CC4331321BE4A2B00C490B8 /* Historique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC4331221BE4A2B00C490B8 /* Historique.swift */; };
+		2CC4331921BE5F5100C490B8 /* CreateSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC4331821BE5F5100C490B8 /* CreateSpending.swift */; };
+		2CC45B5121C103520066C378 /* Comptes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC45B5021C103520066C378 /* Comptes.swift */; };
 		2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43FAD21B51480003B7DE3 /* Person.swift */; };
 		2CD43FB021B517D1003B7DE3 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43FAF21B517D1003B7DE3 /* Spending.swift */; };
 		2CF1A48021BA6815002DD3CB /* CreateSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1A47F21BA6815002DD3CB /* CreateSpending.swift */; };
 		2CF1A48221BA7951002DD3CB /* Comptes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1A48121BA7951002DD3CB /* Comptes.swift */; };
+		2CF1A47E21BA583A002DD3CB /* CreateTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1A47D21BA583A002DD3CB /* CreateTrip.swift */; };
 		2CF1A48421BA86FB002DD3CB /* MyBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1A48321BA86FB002DD3CB /* MyBudget.swift */; };
 		F066FB9621B50D20000A2BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FB9521B50D20000A2BF0 /* AppDelegate.swift */; };
 		F066FB9B21B50D20000A2BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F066FB9921B50D20000A2BF0 /* Main.storyboard */; };
@@ -26,10 +29,13 @@
 
 /* Begin PBXFileReference section */
 		2CC4331221BE4A2B00C490B8 /* Historique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historique.swift; sourceTree = "<group>"; };
+		2CC4331821BE5F5100C490B8 /* CreateSpending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpending.swift; sourceTree = "<group>"; };
+		2CC45B5021C103520066C378 /* Comptes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comptes.swift; sourceTree = "<group>"; };
 		2CD43FAD21B51480003B7DE3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2CD43FAF21B517D1003B7DE3 /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
 		2CF1A47F21BA6815002DD3CB /* CreateSpending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpending.swift; sourceTree = "<group>"; };
 		2CF1A48121BA7951002DD3CB /* Comptes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comptes.swift; sourceTree = "<group>"; };
+		2CF1A47D21BA583A002DD3CB /* CreateTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrip.swift; sourceTree = "<group>"; };
 		2CF1A48321BA86FB002DD3CB /* MyBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBudget.swift; sourceTree = "<group>"; };
 		F066FB9221B50D20000A2BF0 /* TravelMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F066FB9521B50D20000A2BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,8 +118,10 @@
 				2CF1A48321BA86FB002DD3CB /* MyBudget.swift */,
 				2CF1A47F21BA6815002DD3CB /* CreateSpending.swift */,
 				F0B5852921BE5EAC0041D6E5 /* CreateTripController.swift */,
+				2CF1A47D21BA583A002DD3CB /* CreateTrip.swift */,
 				2CC4331221BE4A2B00C490B8 /* Historique.swift */,
-				2CF1A48121BA7951002DD3CB /* Comptes.swift */,
+				2CC45B5021C103520066C378 /* Comptes.swift */,
+				2CC4331821BE5F5100C490B8 /* CreateSpending.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF1A47E21BA583A002DD3CB /* CreateTrip.swift in Sources */,
+				2CC45B5121C103520066C378 /* Comptes.swift in Sources */,
 				2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */,
 				2CC4331321BE4A2B00C490B8 /* Historique.swift in Sources */,
 				F0B5852C21BE6ECB0041D6E5 /* DynamicPersonForm.swift in Sources */,
