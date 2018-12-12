@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Comptes: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class 	ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     @IBOutlet weak var pickerTextField: UITextField!
     

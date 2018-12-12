@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="juI-JK-w8r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="juI-JK-w8r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,7 +110,11 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Groupe" id="Y8G-At-Nrz"/>
                     <navigationItem key="navigationItem" title="Groupe" id="Bb2-VD-OIP">
-                        <barButtonItem key="leftBarButtonItem" title="Retour" id="WeB-Mz-Umc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Retour" id="WeB-Mz-Umc">
+                            <connections>
+                                <segue destination="juI-JK-w8r" kind="showDetail" id="Cep-wz-3bb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Nouvelle dépense" id="Pth-ij-y97">
                             <connections>
                                 <segue destination="Xm8-n5-1Cw" kind="show" id="qSN-eO-ZBy"/>
@@ -215,11 +219,11 @@
             </objects>
             <point key="canvasLocation" x="-996" y="-2910"/>
         </scene>
-        <!--Item-->
+        <!--Groupe-->
         <scene sceneID="MNk-Nj-ZfE">
             <objects>
                 <navigationController id="AnU-XJ-FC9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="diu-Oh-hJe"/>
+                    <tabBarItem key="tabBarItem" title="Groupe" id="diu-Oh-hJe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Mv4-a2-kkE">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -252,11 +256,11 @@
             </objects>
             <point key="canvasLocation" x="2001" y="-2748"/>
         </scene>
-        <!--Item-->
+        <!--Historique-->
         <scene sceneID="Am0-e2-Au5">
             <objects>
                 <navigationController id="i4m-gI-FCm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Fco-SX-888"/>
+                    <tabBarItem key="tabBarItem" title="Historique" id="Fco-SX-888"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PTB-h0-zgl">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -281,10 +285,10 @@
                                 <rect key="frame" x="16" y="129" width="135" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6P-Nr-dWJ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6P-Nr-dWJ">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Budget initial:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXd-Nl-AQr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget initial:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXd-Nl-AQr">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -292,10 +296,10 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2A-2f-gm9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2A-2f-gm9">
                                         <rect key="frame" x="0.0" y="30.5" width="135" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Budget actuel:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm8-aC-mh8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget actuel:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm8-aC-mh8">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -303,10 +307,10 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2TC-UP-VWh">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TC-UP-VWh">
                                         <rect key="frame" x="0.0" y="61" width="135" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ce que je dois:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llF-6G-Zwb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ce que je dois:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llF-6G-Zwb">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -314,10 +318,10 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="204-l8-hGU">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="204-l8-hGU">
                                         <rect key="frame" x="0.0" y="91.5" width="135" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ce qu'on me doit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRq-wy-W74">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ce qu'on me doit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRq-wy-W74">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -370,7 +374,7 @@
         <!--Comptes-->
         <scene sceneID="j6K-kJ-WJo">
             <objects>
-                <viewController id="o7e-t6-0i0" customClass="Comptes" customModule="TravelMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="o7e-t6-0i0" customClass="ComptesViewController" customModule="TravelMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ga1-zF-m5c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -405,7 +409,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Comptes" id="Zd3-w4-0CM"/>
                     <navigationItem key="navigationItem" title="Comptes" id="oQN-V8-G1W">
-                        <barButtonItem key="leftBarButtonItem" title="Retour" id="Mba-Jy-lrQ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Retour" id="Mba-Jy-lrQ">
+                            <connections>
+                                <segue destination="juI-JK-w8r" kind="show" id="9IN-bP-Tqe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Nouvelle dépense" id="aFO-Uu-JPE">
                             <connections>
                                 <segue destination="Xm8-n5-1Cw" kind="show" id="kew-gA-F13"/>
@@ -465,7 +473,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Historique" id="NgV-uQ-1K8"/>
                     <navigationItem key="navigationItem" title="Historique" id="4lW-JQ-yrX">
-                        <barButtonItem key="leftBarButtonItem" title="Retour" id="xiw-0X-2GY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Retour" id="xiw-0X-2GY">
+                            <connections>
+                                <segue destination="juI-JK-w8r" kind="showDetail" id="oVg-ra-EOd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Nouvelle dépense" id="c5W-sb-mhl">
                             <connections>
                                 <segue destination="Xm8-n5-1Cw" kind="show" id="TVx-kL-ztl"/>
@@ -477,11 +489,11 @@
             </objects>
             <point key="canvasLocation" x="4718" y="-3089"/>
         </scene>
-        <!--Item-->
+        <!--Comptes-->
         <scene sceneID="bX2-Ob-ibN">
             <objects>
                 <navigationController id="VG3-5w-ZfY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MyR-CT-Ivk"/>
+                    <tabBarItem key="tabBarItem" title="Comptes" id="MyR-CT-Ivk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tQp-0b-9v9">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -547,25 +559,46 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pour :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jL-6o-RTs">
+                                        <rect key="frame" x="8" y="183" width="45" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2V-fv-OxO">
+                                <rect key="frame" x="-1" y="321" width="375" height="297"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eNY-h8-BEv"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Nouvelle dépense" id="7Lb-8o-AVp">
+                        <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="SRb-oe-eR8">
+                            <connections>
+                                <action selector="saveSpending:" destination="Xm8-n5-1Cw" id="sKQ-FK-zCF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="nomDepense" destination="g0s-E6-biY" id="nS9-nv-cSb"/>
-                        <outlet property="pickerTextField" destination="hgz-0Q-K7c" id="cyd-Zk-BvD"/>
-                        <outlet property="somme" destination="vRK-Dd-cO8" id="11Q-Tt-ba5"/>
+                        <outlet property="payList" destination="J2V-fv-OxO" id="iew-tZ-0wK"/>
+                        <outlet property="pickerTextField" destination="hgz-0Q-K7c" id="BLb-pF-MhP"/>
+                        <outlet property="sum" destination="vRK-Dd-cO8" id="9Ir-Ki-Hti"/>
+                        <outlet property="tripName" destination="g0s-E6-biY" id="TZj-D5-baG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGQ-ZT-ywC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6062" y="-3240"/>
+            <point key="canvasLocation" x="6061.6000000000004" y="-3240.6296851574216"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kew-gA-F13"/>
+        <segue reference="qSN-eO-ZBy"/>
+        <segue reference="Cep-wz-3bb"/>
     </inferredMetricsTieBreakers>
 </document>

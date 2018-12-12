@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CC45B5121C103520066C378 /* Comptes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC45B5021C103520066C378 /* Comptes.swift */; };
+		2CC45B5121C103520066C378 /* ComptesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC45B5021C103520066C378 /* ComptesViewController.swift */; };
 		2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43FAD21B51480003B7DE3 /* Person.swift */; };
 		2CD43FB021B517D1003B7DE3 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43FAF21B517D1003B7DE3 /* Spending.swift */; };
 		F066FB9621B50D20000A2BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FB9521B50D20000A2BF0 /* AppDelegate.swift */; };
@@ -20,10 +20,11 @@
 		F0B5852A21BE5EAC0041D6E5 /* CreateTripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B5852921BE5EAC0041D6E5 /* CreateTripController.swift */; };
 		F0B5852C21BE6ECB0041D6E5 /* DynamicPersonForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B5852B21BE6ECB0041D6E5 /* DynamicPersonForm.swift */; };
 		F0F2DD2C21C17A5C00F505CD /* CreateSpendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2DD2B21C17A5C00F505CD /* CreateSpendingController.swift */; };
+		FAA3752521C1CADF004D48AF /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3752421C1CADF004D48AF /* HistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CC45B5021C103520066C378 /* Comptes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comptes.swift; sourceTree = "<group>"; };
+		2CC45B5021C103520066C378 /* ComptesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComptesViewController.swift; sourceTree = "<group>"; };
 		2CD43FAD21B51480003B7DE3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2CD43FAF21B517D1003B7DE3 /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
 		F066FB9221B50D20000A2BF0 /* TravelMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +39,7 @@
 		F0B5852921BE5EAC0041D6E5 /* CreateTripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripController.swift; sourceTree = "<group>"; };
 		F0B5852B21BE6ECB0041D6E5 /* DynamicPersonForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicPersonForm.swift; sourceTree = "<group>"; };
 		F0F2DD2B21C17A5C00F505CD /* CreateSpendingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpendingController.swift; sourceTree = "<group>"; };
+		FAA3752421C1CADF004D48AF /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +116,9 @@
 				F066FBB221B56917000A2BF0 /* TripTableViewController.swift */,
 				F075B02421BA653F0014506E /* ParticipantDetailViewController.swift */,
 				F0B5852921BE5EAC0041D6E5 /* CreateTripController.swift */,
-				2CC45B5021C103520066C378 /* Comptes.swift */,
+				2CC45B5021C103520066C378 /* ComptesViewController.swift */,
 				F0F2DD2B21C17A5C00F505CD /* CreateSpendingController.swift */,
+				FAA3752421C1CADF004D48AF /* HistoryTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,7 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CC45B5121C103520066C378 /* Comptes.swift in Sources */,
+				2CC45B5121C103520066C378 /* ComptesViewController.swift in Sources */,
 				F0F2DD2C21C17A5C00F505CD /* CreateSpendingController.swift in Sources */,
 				2CD43FAE21B51480003B7DE3 /* Person.swift in Sources */,
 				F0B5852C21BE6ECB0041D6E5 /* DynamicPersonForm.swift in Sources */,
@@ -199,6 +202,7 @@
 				F075B02521BA653F0014506E /* ParticipantDetailViewController.swift in Sources */,
 				F066FBAE21B51DB0000A2BF0 /* Trip.swift in Sources */,
 				F0B5852A21BE5EAC0041D6E5 /* CreateTripController.swift in Sources */,
+				FAA3752521C1CADF004D48AF /* HistoryTableViewController.swift in Sources */,
 				F066FB9621B50D20000A2BF0 /* AppDelegate.swift in Sources */,
 				F066FBB321B56917000A2BF0 /* TripTableViewController.swift in Sources */,
 			);
